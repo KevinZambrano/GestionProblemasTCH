@@ -85,7 +85,7 @@
             </ol>
         </div>
         <br>
-        <div class="table-responsive col-md-6 col-xs-6">
+        <div class="table-responsive col-md-8 col-xs-8">
             <table class="table table-hover">
                 <thead>
                 <th>Descripcion</th>

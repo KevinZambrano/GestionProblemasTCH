@@ -90,6 +90,7 @@
         <br>
        
         <br>
+        
         <div class="table-responsive col-md-12">
             <form action="../ServletAgregarAnotacion" method="post">
                 <table class="table-hover">

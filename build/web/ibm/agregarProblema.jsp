@@ -85,12 +85,15 @@
         </div>
         <br>
         <br>
+        <%
+            String idpbi = request.getParameter("idpbi");
+        %>
         <div class="table-responsive col-md-6">
         <form action="../ServletAgregarProblemaIBM" method="post">
             <table class="table table-hover">
                 <tr>
                     <td>Id Problema: </td>
-                    <td><input type="number" class="form-control" name="txtIdProblema"></td>
+                    <td><input type="text" class="form-control" value="<%=idpbi%>" name="txtIdProblema"></td>
                 </tr>
                 <tr>
                     <td>Mes del Problema: </td>

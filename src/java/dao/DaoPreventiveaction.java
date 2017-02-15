@@ -40,7 +40,19 @@ public class DaoPreventiveaction implements DaoPreventiveactionInterface{
 
     @Override
     public boolean agregar(Preventiveaction preventiveaction) throws SQLException, ClassNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ConexionBD con = ConexionBD.getInstancia();
+        PreparedStatement consulta = con.getConnection().prepareStatement("insert into preventiveactions values(null,?,?,?,?,?,?,?)");
+        consulta.setInt(1, preventiveaction.getIdproblema());
+        consulta.setString(2, preventiveaction.getDescripcion());
+        consulta.setString(3, preventiveaction.getResponsable());
+        consulta.setString(4, preventiveaction.getPersonaresponsable());
+        consulta.setString(5, preventiveaction.getLineaservicio());
+        consulta.setString(6, preventiveaction.getFechatermino());
+        consulta.setString(7, preventiveaction.getEstado());
+        if(consulta.execute())
+            return true;
+        else
+            return false;
     }
     
    
